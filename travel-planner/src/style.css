@@ -1,0 +1,52 @@
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    background: linear-gradient(135deg, rgba(244, 164, 96, 0.7), rgba(255, 239, 213, 0.7), rgba(245, 222, 179, 0.7)),
+    url("/images/home.jpg") center/cover no-repeat;
+    color: #DEB887;
+    text-align: center;
+    padding: 2rem;
+}
+
+.home-cont {
+    max-width: 700px;
+    background: rgba(0, 0, 0, 0, 0.4);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0, 0.3);
+}
+
+.home-cont h1 {
+    font-family: cursive;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #363535;
+    text-shadow: 0 9px 40px rgba(0, 0, 0, 0.3);
+}
+
+.home-cont p {
+    font-family: cursive;
+    font-size: 1.4rem;
+    color: #464545;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.btn {
+    font-family: cursive;
+    background: linear-gradient(to left, #DEB887, #BC8F8F);
+    color: #696262;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+    background: #BC8F8F;
+}
