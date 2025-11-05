@@ -50,3 +50,98 @@
 .btn:hover {
     background: #BC8F8F;
 }
+
+.page {
+    font-family: cursive;
+    text-align: center;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, #BC8F8F, #fdf6e3, #fffaf0);
+    min-height: 100vh;
+}
+
+.page h1 {
+    color: #8b4513;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0, 0.3);
+}
+
+.search-box {
+    padding: 0.8rem 1.2rem;
+    width: 60%;
+    max-width: 400px;
+    border: 2px solid #deb887;
+    border-radius: 15px;
+    outline: none;
+    font-family: cursive;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    margin-bottom: 2.5rem;
+}
+
+.search-box:focus {
+    box-shadow: 0 0 10px rgba(244, 164, 96, 0.6);
+    border-color: #f4a460;
+}
+
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+.card {
+    background-color: #DEB887;
+    border-radius: 10px;
+    height: 410px;
+    overflow: hidden;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card h3 {
+    color: #8b4513;
+    margin: 1rem 0 0.5rem;
+    font-size: 1.3rem;
+    padding: 0.1rem;
+}
+
+.card p {
+    color: #555;
+    font-size: 0.95rem;
+    margin: 0 1rem 1.2rem;
+    line-height: 1.4;
+    padding: 0.1rem;
+}
+
+.trip-btn {
+    display: flex;
+    justify-content: center;
+    background-color: #BC8F8F;
+    color: white;
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 0.5rem 0 1rem;
+    transition: all 0.3s ease;
+}
+
+.trip-btn:hover {
+    background: #8b4513;
+    transform: scale(1.05);
+}
