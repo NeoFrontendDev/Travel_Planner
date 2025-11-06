@@ -145,3 +145,66 @@
     background: #8b4513;
     transform: scale(1.05);
 }
+
+.trip-form {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.trip-form input {
+    padding: 0.6rem 1rem;
+    border-radius: 10px;
+    border: 2px solid #deb887;
+    outline: none;
+}
+
+.trip-form button {
+    padding: 0.6rem 1.5rem;
+    border-radius: 15px;
+    border: none;
+    background: #f4a460;
+    font-weight: bold;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.trip-form button:hover {
+    background: #deb887;
+}
+
+.trip-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 0 2rem;
+}
+
+.trip-card {
+    background: #fffaf0;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.trip-card h3 {
+    margin-bottom: 0.5rem;
+    color: #8b4513;
+}
+
+.trip-card button {
+    background: #f4a460;
+    border: none;
+    padding: 0.5 1rem;
+    color: #555;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.trip-card button:hover {
+    background: #DEB887;
+}
