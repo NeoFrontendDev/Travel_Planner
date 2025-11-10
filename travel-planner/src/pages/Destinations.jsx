@@ -38,33 +38,40 @@ function Destinations() {
   return (
     <div className="page">
       <h1>Explore Destinations</h1>
-      <input type="text" placeholder="Search for a destination..."
-        value={query} onChange={(e) => setQuery(e.target.value)}
-        className="search-box"
-      />
+
+      <input type="text" placeholder="Search for a destination..." value={query}
+        onChange={(e) => setQuery(e.target.value)} className="search-box"/>
 
       <div className="destinations-grid">
         {filtered.map((dest, index) => (
-          <div
-            className="card"
-            key={index}
-            onClick={() => setSelected(dest)}
-          >
+          <div className="card" key={index} onClick={() => setSelected(dest)}>
             <img src={dest.img} alt={dest.name} />
             <h3>{dest.name}</h3>
             <p>{dest.desc}</p>
-            {/* TripAdvisor Button */}
-            <a
-              href={dest.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="trip-btn"
-            >
-              View More
+
+            <a href={dest.link} target="_blank" rel="noopener noreferrer" className="trip-btn">
+              View on TripAdvisor
             </a>
           </div>
         ))}
       </div>
+
+      {/* === MODAL === */}
+      {selected && (
+        <div className="modal-overlay" onClick={() => setSelected(null)}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <img src={selected.img} alt={selected.name} />
+            <h2>{selected.name}</h2>
+            <p>{selected.desc}</p>
+
+            <a href={selected.link} target="_blank" rel="noopener noreferrer" className="trip-btn">
+              Open in TripAdvisor
+            </a>
+
+            <button onClick={() => setSelected(null)}>Close</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

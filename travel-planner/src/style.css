@@ -55,7 +55,7 @@
     font-family: cursive;
     text-align: center;
     padding: 3rem 2rem;
-    background: linear-gradient(135deg, #BC8F8F, #fdf6e3, #fffaf0);
+    background: linear-gradient(135deg, #f79c4d, #f4a460, #dd7f3b, #BC8F8F, #fdf6e3, #fffaf0);
     min-height: 100vh;
 }
 
@@ -131,18 +131,16 @@
 .trip-btn {
     display: flex;
     justify-content: center;
-    background-color: #BC8F8F;
-    color: white;
+    color: #696262;
     text-decoration: none;
     padding: 0.6rem 1.2rem;
-    border-radius: 5px;
     font-weight: bold;
     margin: 0.5rem 0 1rem;
     transition: all 0.3s ease;
 }
 
 .trip-btn:hover {
-    background: #8b4513;
+    background: #dd7f3b;
     transform: scale(1.05);
 }
 
@@ -207,4 +205,81 @@
 
 .trip-card button:hover {
     background: #DEB887;
+}
+
+.trip-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.trip-buttons button {
+    background: #f4a460;
+    border: none;
+    padding: 0.4rem 1rem;
+    border-radius: 10px;
+    color: #8b4513;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.trip-buttons button:hover {
+    background: #DEB887;
+}
+
+.trip-card a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #8b4513;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.trip-card a:hover {
+    text-decoration: underline;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #fffaf0;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+    width: 300px;
+    text-align: center;
+}
+
+.modal-content input {
+    display: block;
+    width: 93%;
+    margin: 1rem 0;
+    padding: 0.6rem;
+    border-radius: 10px;
+    border: 2px solid #deb887;
+    outline: none;
+}
+
+.modal-content button {
+    background: #f4a460;
+    color: #8b4513;
+    display: inline-block;
+    justify-content: center;
+    padding: 0.4rem 1rem;
+    margin-left: 0.3rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
 }
