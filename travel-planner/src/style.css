@@ -1,4 +1,5 @@
 
+/*Home page*/
 .home {
     display: flex;
     align-items: center;
@@ -51,6 +52,7 @@
     background: #BC8F8F;
 }
 
+/*Page color scheme*/
 .page {
     font-family: cursive;
     text-align: center;
@@ -66,6 +68,7 @@
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0, 0.3);
 }
 
+/*Destination and Itenarary*/
 .search-box {
     padding: 0.8rem 1.2rem;
     width: 60%;
@@ -95,7 +98,7 @@
 .card {
     background-color: #DEB887;
     border-radius: 10px;
-    height: 410px;
+    height: 465px;
     overflow: hidden;
     box-shadow: 0 10px 50px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -128,21 +131,34 @@
     padding: 0.1rem;
 }
 
-.trip-btn {
-    display: flex;
+.trip-btn, .add-btn {
+    display: inline-block;
     justify-content: center;
-    color: #696262;
+    text-align: center;
+    margin-bottom: 0.4rem;
+    background: #e09a54;
     text-decoration: none;
-    padding: 0.6rem 1.2rem;
+    border: none;
+    padding: 0.3rem 1rem;
+    border-radius: 10px;
+    color: #696262;
+    cursor: pointer;
     font-weight: bold;
-    margin: 0.5rem 0 1rem;
-    transition: all 0.3s ease;
+    font-family: cursive;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.25s ease;
 }
 
-.trip-btn:hover {
-    background: #dd7f3b;
-    transform: scale(1.05);
+.trip-btn:hover, .add-btn:hover {
+    background: #d2893e;
+    transform: scale(1.07);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
 }
+
+.trip-btn:active, .add-btn:active {
+    transform: scale(0.97);
+}
+
 
 .trip-form {
     display: flex;
@@ -193,41 +209,6 @@
     color: #8b4513;
 }
 
-.trip-card button {
-    background: #f4a460;
-    border: none;
-    padding: 0.5 1rem;
-    color: #555;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.trip-card button:hover {
-    background: #DEB887;
-}
-
-.trip-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-    margin-top: 1rem;
-}
-
-.trip-buttons button {
-    background: #f4a460;
-    border: none;
-    padding: 0.4rem 1rem;
-    border-radius: 10px;
-    color: #8b4513;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.trip-buttons button:hover {
-    background: #DEB887;
-}
-
 .trip-card a {
     display: inline-block;
     margin-top: 0.5rem;
@@ -238,6 +219,46 @@
 
 .trip-card a:hover {
     text-decoration: underline;
+}
+
+.trip-card a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    background: #f79534;
+    border-radius: 5px;
+    padding: 0.1rem 1.5rem;
+}
+
+.trip-buttons button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.3rem 1.2rem;
+    background: #d88315;
+    color: #4b3b2b;
+    margin-inline: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    font-family: cursive;
+    font-size: 0.95rem;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.trip-buttons button:hover {
+    background: #a891bb;
+    transform: translateY(-3ox);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0, 0.2);
+}
+
+.trip-buttons button:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0, 0.2);
 }
 
 .modal-overlay {
