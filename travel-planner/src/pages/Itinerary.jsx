@@ -73,7 +73,7 @@ function Itinerary() {
           <div key={index} className="trip-card">
             <h3>{trip.destination}</h3>
             <p>{trip.date}</p>
-            <a href={trip.link} target="_blank" rel="noreferrer">
+            <a href={trip.link} target="_blank" rel="nonreferrer">
               View on Tripadvisor
             </a>
             <div className="trip-buttons">
