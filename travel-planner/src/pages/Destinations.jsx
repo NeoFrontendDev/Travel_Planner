@@ -1,8 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 function Destinations() {
   const [query, setQuery] = useState("");
   const [selected, setSelected] = useState(null);
+  const [itinerary, setItinerary] = useState([]);
+
+  useEffect(() => {
+    const savedTrips = JSON.parse(localStorage.getItem("itinerary")) || [];
+    setItinerary(savedTrips);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("itinerary", JSON.stringify(itinerary));
+  }, [itinerary]);
 
   const destinations = [
     {
@@ -35,6 +45,16 @@ function Destinations() {
     d.name.toLowerCase().includes(query.toLowerCase())
   );
 
+  const addToItinerary = (dest) => {
+    if (itinerary.find((trip) => trip.name === dest.name)) {
+      alert('${dest.name} is already in your itinerary.');
+      return;
+    }
+    const updated = [...itinerary, dest];
+    setItinerary(updated);
+    alert('${dest.name} added to your itinerary.');
+  };
+
   return (
     <div className="page">
       <h1>Explore Destinations</h1>
@@ -49,31 +69,19 @@ function Destinations() {
             <h3>{dest.name}</h3>
             <p>{dest.desc}</p>
 
-            <a href={dest.link} target="_blank" rel="noopener noreferrer" className="trip-btn">
-              View on TripAdvisor
-            </a>
+            <div className="card-buttons">
+              <a href={dest.link} target="_blank" rel="noopener noreferrer" className="trip-btn">
+                View on TripAdvisor
+              </a>
+
+              <button onClick={() => addToItinerary(dest)} className="add-btn">Add to Itinerary</button>
+            </div>
           </div>
         ))}
       </div>
-
-      {/* === MODAL === */}
-      {selected && (
-        <div className="modal-overlay" onClick={() => setSelected(null)}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <img src={selected.img} alt={selected.name} />
-            <h2>{selected.name}</h2>
-            <p>{selected.desc}</p>
-
-            <a href={selected.link} target="_blank" rel="noopener noreferrer" className="trip-btn">
-              Open in TripAdvisor
-            </a>
-
-            <button onClick={() => setSelected(null)}>Close</button>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
+
 
 export default Destinations;
